@@ -6,6 +6,9 @@
   "contributors": [
      "Chris Trevino <darthtrevino@gmail.com>"
   ],
+  "scripts": {
+    "test": "./node_modules/.bin/grunt test"
+  },
   "directories": {
     "lib": "./lib"
   },
@@ -14,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/ormjs/orm.js"
   },
-  "homepage": "https://github.com/ormjs/orm.js"
+  "homepage": "https://github.com/ormjs/orm.js",
   "devDependencies": {
     "async": "^0.9.0",
     "chai": "^1.10.0",
