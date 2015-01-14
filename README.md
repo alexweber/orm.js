@@ -1,5 +1,8 @@
 orm.js
 ==============
+
+[![Build Status](https://travis-ci.org/ormjs/orm.js.svg?branch=master)](https://travis-ci.org/ormjs/orm.js)
+
 `orm.js` ia a mirror from `persistence.js`
 which is an asynchronous Javascript object-relational
 mapper library. It can be used both in the web browser and on
