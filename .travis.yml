@@ -5,3 +5,9 @@ before_script:
     - "npm install"
 script:
     - "npm test"
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/66a14e403e39a310f3d3
+    on_success: change
