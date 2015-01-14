@@ -2,6 +2,14 @@
   "name": "orm.js",
   "version": "0.5.0",
   "engine": "node >=0.2.0",
-  "author": "Zef Hemel",
-  "directories": {"lib": "./lib"}
+  "author": "The Code Destroyer <the.code.destroyer@gmail.com>",
+  "directories": {
+    "lib": "./lib"
+  },
+  "description": "orm.js is an asynchronous Javascript object-relational mapper library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheCodeDestroyer/orm.js"
+  },
+  "homepage": "https://github.com/TheCodeDestroyer/orm.js"
 }
