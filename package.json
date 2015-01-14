@@ -3,13 +3,36 @@
   "version": "0.5.6",
   "engine": "node >=0.2.0",
   "author": "The Code Destroyer <the.code.destroyer@gmail.com>",
+  "contributors": [
+     "Chris Trevino <darthtrevino@gmail.com>"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/grunt test"
+  },
   "directories": {
     "lib": "./lib"
   },
   "description": "orm.js is an asynchronous Javascript object-relational mapper library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheCodeDestroyer/orm.js"
+    "url": "https://github.com/ormjs/orm.js"
   },
-  "homepage": "https://github.com/TheCodeDestroyer/orm.js"
+  "homepage": "https://github.com/ormjs/orm.js",
+  "devDependencies": {
+    "async": "^0.9.0",
+    "chai": "^1.10.0",
+    "connect": "^3.3.4",
+    "express": "^4.11.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-mocha": "^0.4.11",
+    "grunt-mocha-test": "^0.12.6",
+    "jit-grunt": "^0.9.0",
+    "mocha": "^2.1.0",
+    "mysql": "^2.5.4",
+    "q": "^1.1.2",
+    "sqlite3": "^3.0.4",
+    "time-grunt": "^1.0.0"
+  }
 }
