@@ -1,9 +1,9 @@
 {
   "name": "orm.js",
   "main": "./lib/persistence.js",
-  "version": "0.5.5",
-  "_release": "0.5.5",
-  "_target": "~0.5.5",
+  "version": "0.5.6",
+  "_release": "0.5.6",
+  "_target": "~0.5.6",
   "_source": "git://github.com/TheCodeDestroyer/orm.js.git",
   "homepage": "https://github.com/TheCodeDestroyer/orm.js",
   "authors": [
