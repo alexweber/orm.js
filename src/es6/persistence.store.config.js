@@ -2,16 +2,16 @@ exports.init = function(persistence, config) {
   var persistenceStore;
   switch (config.adaptor) {
     case 'memory':
-      persistenceStore = require('./persistence.store.memory');
+      persistenceStore = require('./persistence.store.memory.js');
       break;
     case 'mysql':
-      persistenceStore = require('./persistence.store.mysql');
+      persistenceStore = require('./persistence.store.mysql.js');
       break;
     case 'sqlite3':
-      persistenceStore = require('./persistence.store.sqlite3');
+      persistenceStore = require('./persistence.store.sqlite3.js');
       break;
     default:
-      persistenceStore = require('./persistence.store.mysql');
+      persistenceStore = require('./persistence.store.mysql.js');
       break;
   }
 

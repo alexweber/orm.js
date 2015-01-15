@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
-var persistence = require('../../lib/persistence').createPersistence();
-var persistenceStore = require('../../lib/persistence.store.mysql');
+var persistence = require('../../src/es5/persistence').createPersistence();
+var persistenceStore = require('../../src/es5/persistence.store.mysql');
 
 var create = function(data, cb) {
   var inexistent_table = new InexistentTable(data);

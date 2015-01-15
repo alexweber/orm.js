@@ -34,6 +34,7 @@ node_modules/
 npm-debug.log
 
 # Application-Generated Files
+src/es5/
 build/
 test-sqlite3.db
 localhost

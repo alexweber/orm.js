@@ -4,9 +4,11 @@ var QueryCollection = require('./query_collection');
  * @param entityName the name of the entity to create the collection for
  * @constructor
  */
-function DbQueryCollection (session, entityName) {
-    this.init(session, entityName, DbQueryCollection);
+class DbQueryCollection extends QueryCollection {
+    constructor (session, entityName) {
+        super(session);
+        this.init(session, entityName, DbQueryCollection);
+    }
 }
-DbQueryCollection.prototype = new QueryCollection();
 
 module.exports = DbQueryCollection;

@@ -5,7 +5,7 @@
  *   npm install mysql
  */
 var sys = require('sys');
-var sql = require('./persistence.store.sql');
+var sql = require('./persistence.store.sql.js');
 var mysql = require('mysql');
 
 var db, username, password;

@@ -395,7 +395,7 @@ module.exports = {
             } else {
                 var type = meta.hasOne[rel].type;
                 if (type.meta.isMixin) {
-                    type = getEntity(this._data[rel + '_class']);
+                    type = session.getEntity(this._data[rel + '_class']);
                 }
                 type.load(session, tx, this._data[rel], function(obj) {
                     that._data_obj[rel] = obj;

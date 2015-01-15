@@ -13,25 +13,14 @@
  * Default filter that does not filter on anything
  * currently it generates a 1=1 SQL query, which is kind of ugly
  */
-function NullFilter () {
+
+class NullFilter {
+    match () { return true; }
+    makeFit () { }
+    makeNotFit () { }
+    toUniqueString () { return "NULL"; }
+    subscribeGlobally () { }
+    unsubscribeGlobally () { }
 }
-
-NullFilter.prototype.match = function (o) {
-    return true;
-};
-
-NullFilter.prototype.makeFit = function(o) {
-};
-
-NullFilter.prototype.makeNotFit = function(o) {
-};
-
-NullFilter.prototype.toUniqueString = function() {
-    return "NULL";
-};
-
-NullFilter.prototype.subscribeGlobally = function() { };
-
-NullFilter.prototype.unsubscribeGlobally = function() { };
 
 module.exports = NullFilter;

@@ -203,7 +203,7 @@ module.exports = {
          */
         persistence.define = function (entityName, fields) {
             if (entityMeta[entityName]) { // Already defined, ignore
-                return getEntity(entityName);
+                return persistence.getEntity(entityName);
             }
             var meta = {
                 name: entityName,
@@ -214,7 +214,7 @@ module.exports = {
                 hasOne: {}
             };
             entityMeta[entityName] = meta;
-            return getEntity(entityName);
+            return persistence.getEntity(entityName);
         };
 
         /**
@@ -358,7 +358,7 @@ module.exports = {
          * entity name
          * @return the entity constructor function to be invoked with `new fn()`
          */
-        function getEntity(entityName) {
+        persistence.getEntity = function(entityName) {
             if (entityClassCache[entityName]) {
                 return entityClassCache[entityName];
             }
@@ -510,7 +510,7 @@ module.exports = {
             var session = this;
             for(var entityName in dump) {
                 if(dump.hasOwnProperty(entityName)) {
-                    var Entity = getEntity(entityName);
+                    var Entity = persistence.getEntity(entityName);
                     var fields = Entity.meta.fields;
                     var instances = dump[entityName];
                     for(var i = 0; i < instances.length; i++) {

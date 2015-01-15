@@ -11,11 +11,25 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     /**
-     * Browserify Compilaction
+     * Traceur Transpiling
+     */
+    traceur: {
+      custom: {
+        files: [{
+          expand: true,
+          cwd: 'src/es6',
+          src: ['**/*.js'],
+          dest: 'src/es5'
+        }]
+      }
+    },
+
+    /**
+     * Browserify Packaging
      */
     browserify: {
       main: {
-        src: ['lib/persistence.js', 'lib/persistence/**/*.js'],
+        src: ['src/es5/persistence.js', 'src/es5/persistence/**/*.js'],
         dest: 'build/persistence.js'
       }
     },
@@ -50,5 +64,16 @@ module.exports = function (grunt) {
     'jshint:gruntfile',
     'mochaTest'
   ]);
+
+  grunt.registerTask('construct', [
+    'traceur',
+    'browserify'
+  ]);
+
+  grunt.registerTask('build', [
+      'test',
+      'construct'
+  ]);
+
   grunt.registerTask("default", 'test');
 };
