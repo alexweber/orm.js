@@ -11,6 +11,16 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     /**
+     * Browserify Compilaction
+     */
+    browserify: {
+      main: {
+        src: ['lib/persistence.js', 'lib/persistence/**/*.js'],
+        dest: 'build/persistence.js'
+      }
+    },
+
+    /**
      * JSHinting
      */
     jshint: {

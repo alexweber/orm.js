@@ -4,7 +4,7 @@
   "engine": "node >=0.2.0",
   "author": "The Code Destroyer <the.code.destroyer@gmail.com>",
   "contributors": [
-     "Chris Trevino <darthtrevino@gmail.com>"
+    "Chris Trevino <darthtrevino@gmail.com>"
   ],
   "scripts": {
     "test": "./node_modules/.bin/grunt test"
@@ -24,6 +24,7 @@
     "connect": "^3.3.4",
     "express": "^4.11.0",
     "grunt": "^0.4.5",
+    "grunt-browserify": "^3.2.1",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-mocha": "^0.4.11",
